@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Mainstream Boutique — FranDev CEO Dashboard v1</title>
+<style>
+  :root {
+    --bg: #f7f5f0;
+    --ink: #1f1d1b;
+    --muted: #6e6a63;
+    --accent: #8b2d2d;
+    --green: #2f6a3e;
+    --amber: #b17a1e;
+    --red: #a03232;
+    --card: #ffffff;
+    --border: #e2ded4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.45;
+  }
+  header {
+    padding: 32px 40px 20px;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(180deg, #ffffff 0%, #f7f5f0 100%);
+  }
+  h1 { margin: 0; font-size: 28px; letter-spacing: -0.01em; }
+  .sub { color: var(--muted); font-size: 14px; margin-top: 6px; }
+  main { padding: 28px 40px 60px; max-width: 1280px; }
+  section { margin-bottom: 32px; }
+  h2 {
+    font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--muted); margin: 0 0 12px; font-weight: 600;
+  }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 10px; padding: 20px; box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+  }
+  .kpi .label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+  .kpi .value { font-size: 36px; font-weight: 600; letter-spacing: -0.02em; }
+  .kpi .delta { font-size: 13px; color: var(--muted); margin-top: 4px; }
+  .kpi .delta.pos { color: var(--green); }
+  .kpi .delta.neg { color: var(--red); }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); }
+  th { font-weight: 600; color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .bar { display: inline-block; height: 10px; border-radius: 3px; background: var(--accent); vertical-align: middle; margin-right: 8px; }
+  .pill { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+  .pill.green { background: #e4f2e8; color: var(--green); }
+  .pill.amber { background: #f7ecd0; color: var(--amber); }
+  .pill.red   { background: #f6dcdc; color: var(--red); }
+  .refresh {
+    background: #fffbeb; border: 1px solid #f3e1a1; border-radius: 8px;
+    padding: 12px 16px; font-size: 13px; color: #5b4a16; margin-top: 24px;
+  }
+  .refresh b { color: #3a2e0a; }
+  footer { padding: 20px 40px 40px; color: var(--muted); font-size: 12px; }
+  .two-col { display: grid; grid-template-columns: 1.2fr 1fr; gap: 20px; }
+  @media (max-width: 900px) { .two-col { grid-template-columns: 1fr; } }
+  .redact-note { font-size:11.5px; color: var(--muted); font-style: italic; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>FranDev Pipeline — CEO Dashboard v1</h1>
+  <div class="sub">Mainstream Boutique Franchising · Snapshot: 2026-04-20 · Owner: Clay DeNicola → Katie Skrove · <span class="redact-note">Web version · aggregate data only</span></div>
+</header>
+
+<main>
+
+<!-- TOP-LINE KPIs -->
+<section>
+  <h2>At a Glance</h2>
+  <div class="grid">
+    <div class="card kpi">
+      <div class="label">Total Pipeline</div>
+      <div class="value">~1.7K</div>
+      <div class="delta">Leads in FranConnect</div>
+    </div>
+    <div class="card kpi">
+      <div class="label">Fresh (≤30 days)</div>
+      <div class="value">low single digits</div>
+      <div class="delta">Entered since 2026-03-21</div>
+    </div>
+    <div class="card kpi">
+      <div class="label">Active Deals</div>
+      <div class="value">1</div>
+      <div class="delta">FDD Disclosed &amp; App Sent</div>
+    </div>
+    <div class="card kpi">
+      <div class="label">Intro Calls Booked</div>
+      <div class="value">0</div>
+      <div class="delta">This week (pre-Katie)</div>
+    </div>
+    <div class="card kpi">
+      <div class="label">Intro Calls Conducted</div>
+      <div class="value">0</div>
+      <div class="delta">This week — Workflow B tracks</div>
+    </div>
+    <div class="card kpi">
+      <div class="label">Workflow Automations</div>
+      <div class="value" style="color: var(--green);">LIVE</div>
+      <div class="delta pos">Workflow A + B active 2026-04-20</div>
+    </div>
+  </div>
+</section>
+
+<!-- PIPELINE HEALTH -->
+<section class="two-col">
+
+  <div class="card">
+    <h2>Status Distribution — top of funnel</h2>
+    <table>
+      <thead>
+        <tr><th>Status</th><th>Share*</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>New Lead</td><td><span class="bar" style="width: 170px;"></span>~85%</td></tr>
+        <tr><td>Zoom Introductions</td><td><span class="bar" style="width: 10px;"></span>~5%</td></tr>
+        <tr><td>FDD Disclosed &amp; App Sent</td><td><span class="bar" style="width: 10px;"></span>~5%</td></tr>
+        <tr><td>Re-engagement - Working</td><td><span class="bar" style="width: 2px;"></span>—</td></tr>
+        <tr><td>Introductory Call Conducted</td><td><span class="bar" style="width: 2px;"></span>—</td></tr>
+      </tbody>
+    </table>
+    <div style="font-size: 12px; color: var(--muted); margin-top: 10px;">*Top 20 freshest leads. Full pipeline breakdown in FranConnect Reports.</div>
+  </div>
+
+  <div class="card">
+    <h2>Source Mix — top 20 freshest</h2>
+    <table>
+      <thead>
+        <tr><th>Source</th><th>Share</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Recruitment Website</td><td><span class="bar" style="width: 160px; background: var(--green);"></span>~80%</td></tr>
+        <tr><td>Others</td><td><span class="bar" style="width: 10px; background: var(--amber);"></span>~5%</td></tr>
+        <tr><td>None</td><td><span class="bar" style="width: 30px; background: var(--muted);"></span>~15%</td></tr>
+      </tbody>
+    </table>
+    <div style="font-size: 12px; color: var(--muted); margin-top: 10px;">Recruitment Website is the dominant funnel. Referral / Zoom sources underused.</div>
+  </div>
+
+</section>
+
+<!-- WORKFLOW PERFORMANCE -->
+<section>
+  <h2>Workflow Automation Performance</h2>
+  <div class="grid">
+    <div class="card">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+        <strong>Workflow A — Re-engagement Working</strong>
+        <span class="pill green">ACTIVE</span>
+      </div>
+      <div style="font-size: 13px; color: var(--muted); margin-bottom: 12px;">
+        Fires when lead status → Re-engagement - Working · sends Katie's Calendly SMS + internal noti email.
+      </div>
+      <table>
+        <tbody>
+          <tr><td>Fires this week</td><td><b>0</b></td></tr>
+          <tr><td>SMS sent</td><td><b>0</b></td></tr>
+          <tr><td>Replies</td><td><b>0</b></td></tr>
+          <tr><td>Calendly bookings</td><td><b>0</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="card">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+        <strong>Workflow B — Intro Call Conducted</strong>
+        <span class="pill green">ACTIVE</span>
+      </div>
+      <div style="font-size: 13px; color: var(--muted); margin-bottom: 12px;">
+        Fires when lead status → Introductory Call Conducted · sends internal noti email to Clay.
+      </div>
+      <table>
+        <tbody>
+          <tr><td>Fires this week</td><td><b>0</b></td></tr>
+          <tr><td>Downstream: FDD Disclosed</td><td><b>0</b></td></tr>
+          <tr><td>Disengaged post-call</td><td><b>0</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- KATIE QUEUE (anonymized) -->
+<section>
+  <h2>Katie's Week-1 Queue — Top 10 Freshest <span class="redact-note">(anonymized for web)</span></h2>
+  <div class="card" style="padding: 0; overflow: hidden;">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Lead</th>
+          <th>Date Entered</th>
+          <th>Emails Read</th>
+          <th>Heat</th>
+          <th>Signal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Lead A</td><td>2026-04-01</td><td>1</td><td>10</td><td><span class="pill red">HOT</span></td></tr>
+        <tr><td>2</td><td>Lead B</td><td>2026-02-12</td><td>4</td><td>5</td><td><span class="pill red">HOT</span></td></tr>
+        <tr><td>3</td><td>Lead C</td><td>2026-04-07</td><td>1</td><td>5</td><td><span class="pill amber">WARM</span></td></tr>
+        <tr><td>4</td><td>Lead D</td><td>2026-04-02</td><td>1</td><td>5</td><td><span class="pill amber">WARM</span></td></tr>
+        <tr><td>5</td><td>Lead E</td><td>2026-02-05</td><td>2</td><td>0</td><td><span class="pill amber">WARM</span></td></tr>
+        <tr><td>6</td><td>Lead F</td><td>2026-02-18</td><td>2</td><td>0</td><td><span class="pill amber">WARM</span></td></tr>
+        <tr><td>7</td><td>Lead G</td><td>2026-02-26</td><td>0</td><td>0</td><td><span class="pill">COOL</span></td></tr>
+        <tr><td>8</td><td>Lead H</td><td>2026-02-18</td><td>0</td><td>0</td><td><span class="pill">COOL</span></td></tr>
+        <tr><td>9</td><td>Lead I</td><td>2026-02-09</td><td>0</td><td>0</td><td><span class="pill">COOL</span></td></tr>
+        <tr><td>10</td><td>Lead J</td><td>2026-02-04</td><td>0</td><td>0</td><td><span class="pill">COOL</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="font-size: 12px; color: var(--muted); margin-top: 10px;">Lead names redacted on web; full queue with names + contact info in FranConnect Lead Summary.</div>
+</section>
+
+<!-- CALLOUTS -->
+<section>
+  <h2>Notable This Week</h2>
+  <div class="grid">
+    <div class="card">
+      <div style="font-size: 12px; color: var(--muted); margin-bottom: 6px;">STRATEGIC</div>
+      <div style="font-size: 15px; font-weight: 600; margin-bottom: 8px;">Katie Skrove started Day 1</div>
+      <div style="font-size: 13px; color: var(--ink);">
+        Full handoff from Clay's queue. First 10 leads prioritized, workflows automating first-touch SMS + Clay-side internal notifications. Week-1 target: 50 leads contacted, 5+ intro calls booked.
+      </div>
+    </div>
+    <div class="card">
+      <div style="font-size: 12px; color: var(--muted); margin-bottom: 6px;">SYSTEM</div>
+      <div style="font-size: 15px; font-weight: 600; margin-bottom: 8px;">Automation live: Workflow A + B</div>
+      <div style="font-size: 13px; color: var(--ink);">
+        FranConnect workflows activated 2026-04-20. Every status change → Re-engagement - Working auto-texts a lead and notifies Clay. Every Intro Call Conducted → email to Clay confirms pipeline movement.
+      </div>
+    </div>
+    <div class="card">
+      <div style="font-size: 12px; color: var(--muted); margin-bottom: 6px;">OPPORTUNITY</div>
+      <div style="font-size: 15px; font-weight: 600; margin-bottom: 8px;">Top email-engagement lead sitting untouched</div>
+      <div style="font-size: 13px; color: var(--ink);">
+        Highest email-engagement lead in the top-20 (4 emails read) has never been contacted. Entered pipeline Feb 12. Katie's #2 priority this week.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REFRESH INSTRUCTIONS -->
+<div class="refresh">
+  <b>Refresh cadence:</b> This is a static snapshot. For live drill-downs, open
+  FranConnect → <b>Sales → Reports → FranDev Weekly Pulse</b>. Katie refreshes the numbers above
+  every Friday EOD before the Monday CEO sync. v2 will auto-refresh via FranConnect API.
+</div>
+
+</main>
+
+<footer>
+  Mainstream Boutique Franchise Development · Generated 2026-04-20 · Dashboard v1 (web-safe aggregate view).
+</footer>
+
+</body>
+</html>
