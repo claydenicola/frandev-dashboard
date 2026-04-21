@@ -8,7 +8,8 @@
 <style>
   :root{
     --bg:#FAF7F2;--paper:#FFFFFF;--ink:#2B2A28;--ink-soft:#5A5753;--line:#E6DFD4;
-    --accent:#8B6F47;--accent-soft:#C9B896;--green:#4A7C59;--green-soft:#E4EFE5;
+    --accent:#EF9F9F;--accent-dark:#B55D5D;--accent-soft:#FDF1F1;
+    --green:#4A7C59;--green-soft:#E4EFE5;
     --amber:#B8812D;--amber-soft:#F7ECD6;--red:#A0443A;--red-soft:#F3DEDA;
     --blue:#4A6B8A;--blue-soft:#DEE7EF;
   }
@@ -24,7 +25,10 @@
   .b-pending{background:var(--amber-soft);color:var(--amber)}
   .b-blocked{background:var(--red-soft);color:var(--red)}
   .b-info{background:var(--blue-soft);color:var(--blue)}
-  .hero{background:linear-gradient(135deg,#F3EADA 0%,#EADFC8 100%);border:1px solid var(--line);border-radius:10px;padding:20px 24px;margin-bottom:24px}
+  .hero{background:linear-gradient(135deg,#F5B8B8 0%,#EF9F9F 100%);border:1px solid var(--accent-dark);border-radius:10px;padding:20px 24px;margin-bottom:24px;color:#2B2A28}
+  .hero h1{color:#3A1F1F}
+  .hero .subtitle{color:#5A3535}
+  .hero .hero-status{color:#3A1F1F}
   .hero-row{display:flex;gap:20px;flex-wrap:wrap;align-items:center;justify-content:space-between}
   .hero-status{font-size:13px;color:var(--ink-soft)}
   .hero-status b{color:var(--green);font-weight:700}
@@ -48,10 +52,10 @@
   .kpi{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:14px 16px;text-align:center}
   .kpi .n{font-size:26px;font-weight:700;color:var(--ink);letter-spacing:-0.02em;display:block;line-height:1.15}
   .kpi .l{font-size:11.5px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:0.06em;margin-top:4px;display:block}
-  .callout{background:#F7F1E6;border:1px solid var(--accent-soft);border-radius:8px;padding:14px 18px;margin:12px 0;font-size:14px}
-  .callout b{color:var(--accent)}
+  .callout{background:var(--accent-soft);border:1px solid var(--accent);border-left:4px solid var(--accent);border-radius:8px;padding:14px 18px;margin:12px 0;font-size:14px}
+  .callout b{color:var(--accent-dark)}
   .footer{margin-top:32px;padding-top:16px;border-top:1px solid var(--line);color:var(--ink-soft);font-size:12.5px}
-  .stepnum{display:inline-block;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;text-align:center;font-size:12px;font-weight:700;line-height:20px;margin-right:8px}
+  .stepnum{display:inline-block;width:20px;height:20px;border-radius:50%;background:var(--accent-dark);color:#fff;text-align:center;font-size:12px;font-weight:700;line-height:20px;margin-right:8px}
   .owner{font-size:11px;color:var(--ink-soft);margin-left:8px;font-style:italic}
   .redact-note{font-size:11.5px;color:var(--ink-soft);font-style:italic}
 </style>
@@ -138,7 +142,7 @@
     <h2><span class="badge b-live">CEO Layer</span> &nbsp; Executive visibility</h2>
     <table>
       <tr><th>Artifact</th><th>Status</th><th>Use</th></tr>
-      <tr><td><b>CEO Dashboard (HTML glance)</b></td><td><span class="badge b-live">Ready</span></td><td>Static "morning coffee" view — KPIs, status mix, workflow activity, week-1 queue. Refreshed every Friday EOD.</td></tr>
+      <tr><td><b>FranDev Performance Dashboard (HTML glance)</b></td><td><span class="badge b-live">Ready</span></td><td>Used by Clay + Katie weekly to dissect what's working vs not, and for CEO reporting. KPIs, status mix, workflow activity, week-1 queue. Refreshed every Friday EOD.</td></tr>
       <tr><td><b>Native FranConnect Reports spec</b></td><td><span class="badge b-pending">Spec ready</span></td><td>Config spec for 3 reports (Weekly Pulse, Workflow Activity, Conversion Funnel). Build step still pending in-app.</td></tr>
     </table>
   </div>
