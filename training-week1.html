@@ -229,7 +229,7 @@
       <ul>
         <li>The <strong>full lead list</strong>, sorted freshest-first so the newest inbounds float to the top.</li>
         <li>Each row is one lead. Click a lead's name to open their record.</li>
-        <li>Inside a lead record, you'll see tabs across the top — <strong>Primary Info</strong>, <strong>Lead Engagement</strong> (your main tab), plus a handful of others. More on Lead Engagement below.</li>
+        <li>Inside a lead record, you'll see tabs down the left-hand side — <strong>Primary Info</strong>, <strong>Lead Engagement</strong> (your main tab), <strong>Introductory Call</strong>, plus a handful of others. More on Lead Engagement below.</li>
       </ul>
 
       <div class="callout warn">
@@ -430,8 +430,8 @@
         </div>
         <div class="tab-card">
           <h4>2. Re-engagement Status</h4>
-          <div class="count">9 fields · you edit</div>
-          <p>Where this lead is in <em>your</em> re-engagement process — contact attempt count, last contact date, disposition, notes from your outreach.</p>
+          <div class="count">18 fields · you edit</div>
+          <p>Where this lead is in <em>your</em> re-engagement process — attempt log (up to 3 attempts), connection details once they respond, disposition, and disengagement reasons if it goes dead.</p>
         </div>
         <div class="tab-card">
           <h4>3. Intake Checklist</h4>
@@ -445,15 +445,25 @@
         The <strong>status dropdown</strong> (from Section 3) is the <em>headline</em> — where the lead is in the big funnel. The <strong>Lead Engagement tab</strong> is the <em>detail</em> — what's happened, what's next, what you've noted. Status = bucket. Tab = your working notes.
       </div>
 
-      <h3>Don't worry about filling in every field</h3>
-      <p>Not every field has to be touched every time. The ones that matter most in Week 1:</p>
-      <ul>
-        <li><strong>Last Contact Date</strong> — updated automatically when SMS/email fire from the automation; you update manually for replies and calls.</li>
-        <li><strong>Lead Disposition</strong> — your current read on whether this lead is warm, cold, or dead.</li>
-        <li><strong>Notes</strong> — anything Clay or future-you will want to remember about this lead.</li>
-      </ul>
+      <h3>Log every attempt — this is non-negotiable</h3>
+      <p>Section 2 gives you three attempt slots. Every time you reach out to a lead — call, text, email, whatever — log it. We use this data to see what's working and adjust the playbook.</p>
 
       <div class="callout warn">
+        <span class="label">For each attempt, fill in all three fields</span>
+        <strong>Attempt [N] - Date</strong> (when you reached out), <strong>Attempt [N] - Channel</strong> (call / text / email), and <strong>Attempt [N] - Outcome</strong> (no answer, left VM, replied, booked, etc.). If you only log the date but skip channel or outcome, we can't learn anything from it. All three, every attempt.
+      </div>
+
+      <h3>Field order — attempts first, then connection</h3>
+      <p>The section is ordered the way the work actually flows:</p>
+      <ol>
+        <li><strong>Re-engagement Target?</strong> → <strong>Re-engagement Status</strong> — the header. Is this lead in the cohort, and where are they in your cadence?</li>
+        <li><strong>Date of First Attempt</strong> → the three <strong>Attempt 1/2/3 Date · Channel · Outcome</strong> rows — your attempt log.</li>
+        <li><strong>Date of First Connection</strong> → <strong>Connection Channel</strong> → <strong>Disposition Notes</strong> — filled in <em>after</em> the lead responds. What channel finally got them, what you learned.</li>
+        <li><strong>Disengagement Reason</strong> + <strong>Disengagement Note (if Other)</strong> — only if the lead goes dead. Why did we lose them?</li>
+        <li><strong>Moved to dead lead status</strong> — the final toggle if you decide they're done.</li>
+      </ol>
+
+      <div class="callout">
         <span class="label">Questions are free</span>
         If a field is unclear, ignore it and ask Clay. The tab was built for you — we'll refine it based on what actually gets used.
       </div>
